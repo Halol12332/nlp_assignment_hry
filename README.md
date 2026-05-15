@@ -31,27 +31,31 @@ Ensure you have Python 3.8+ installed. You will need the following Python librar
 ```bash
 git clone [https://github.com/yourusername/nlp_assignment_hry.git](https://github.com/yourusername/nlp_assignment_hry.git)
 cd nlp_assignment_hry
-2. Install dependencies
+```
+**2. Install dependencies**
 It is recommended to use a virtual environment. Install the required packages using pip:
 
-Bash
+```Bash
 pip install -r requirements.txt
+```
 (Note: If you don't have a requirements.txt file, you can install them directly: pip install streamlit google-generativeai google-cloud-vision PyPDF2 python-docx nltk fpdf python-dotenv)
 
-3. Configure API Keys securely
+**3. Configure API Keys securely**
 This project requires two sets of credentials. Never commit these files to GitHub. Ensure your .gitignore is set up properly.
 
 Gemini API Key: Create a file named .env in the root directory and add your key:
 
-Cuplikan kode
+```Cuplikan kode
 GEMINI_API_KEY="your_gemini_api_key_here"
+```
 Google Cloud Vision Service Account: Place your Google Cloud service account JSON key file in the root directory. Ensure the filename matches the one specified in app.py (e.g., chat-and-pdf-file-project-*.json), or update app.py to match your new key's filename.
 
 💻 Usage
 Run the application using Streamlit:
 
-Bash
+```Bash
 streamlit run app.py
+```
 Open the provided Local URL (usually http://localhost:8501) in your web browser.
 
 Upload a .pdf or .docx file using the sidebar.
@@ -61,11 +65,12 @@ Review the extracted text in the sidebar preview.
 Type your questions in the chat input box at the bottom of the screen.
 
 📂 Project Structure
-Plaintext
+```Plaintext
 NLP_ASSIGNMENT_HRY/
 │
 ├── app.py                  # Main Streamlit application script
 ├── .env                    # Environment variables (Gemini API Key) - DO NOT COMMIT
 ├── .gitignore              # Specifies intentionally untracked files to ignore
 ├── README.md               # Project documentation
-└── [your-gcp-key].json     # Google Cloud Service Account key - DO N
+└── [your-gcp-key].json     # Google Cloud Service Account key
+```
